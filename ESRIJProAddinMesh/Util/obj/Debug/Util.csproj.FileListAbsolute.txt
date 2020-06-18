@@ -1,0 +1,9 @@
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\bin\Debug\ESRIJ.ArcGISPro.Util.dll.config
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\bin\Debug\ESRIJ.ArcGISPro.Util.dll
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\bin\Debug\ESRIJ.ArcGISPro.Util.pdb
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\obj\Debug\Util.csprojAssemblyReference.cache
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\obj\Debug\ESRIJ.ArcGISPro.Properties.Resources.resources
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\obj\Debug\Util.csproj.GenerateResource.cache
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\obj\Debug\ESRIJ.ArcGISPro.Util.dll
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinMesh\Util\obj\Debug\ESRIJ.ArcGISPro.Util.pdb

@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\GoGetMesh.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\GoGetMesh.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\GoGetMesh.csproj",
+        "projectName": "GoGetMesh",
+        "projectPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\GoGetMesh.csproj",
+        "packagesPath": "C:\\Users\\ej2285\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\ej2285\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\ej2285\\AppData\\Local\\Esri\\NuGet": {},
+          "http://nuget.c1.grapecity.com/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj": {
+                "projectPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "MicrosoftExpressionInteractions": {
+              "target": "Package",
+              "version": "[3.0.40218, )"
+            },
+            "System.Windows.Interactivity.WPF": {
+              "target": "Package",
+              "version": "[2.0.20525, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj",
+        "projectName": "Util",
+        "projectPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

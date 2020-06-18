@@ -16,9 +16,9 @@ namespace ESRIJ.ArcGISPro
     public class ChooseMesh : ComboBox
     {
         #region 定数
-        const string MeshLevel2 = "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/JPN_Boundaries_ECM/FeatureServer/2";
-        const string MeshLevel3 = "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/JPN_Boundaries_ECM/FeatureServer/4";
-        const string MeshLevel4 = "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/JPN_Boundaries_ECM/FeatureServer/5";
+        const string MESHLEVEL2 = "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/JPN_Boundaries_ECM/FeatureServer/2";
+        const string MESHLEVEL3 = "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/JPN_Boundaries_ECM/FeatureServer/4";
+        const string MESHLEVEL4 = "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/JPN_Boundaries_ECM/FeatureServer/5";
         #endregion
 
         #region 起動時
@@ -42,15 +42,15 @@ namespace ESRIJ.ArcGISPro
 
             if (this.Text == "2次メッシュ")
             {
-                url = MeshLevel2;
+                url = MESHLEVEL2;
             }
             else if (this.Text == "3次メッシュ")
             {
-                url = MeshLevel3;
+                url = MESHLEVEL3;
             }
             else if (this.Text == "4次メッシュ")
             {
-                url = MeshLevel4;
+                url = MESHLEVEL4;
             }
             else
             {

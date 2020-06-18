@@ -1,0 +1,234 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.8": {
+      "MicrosoftExpressionInteractions/3.0.40218": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        }
+      },
+      "System.Windows.Interactivity.WPF/2.0.20525": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win": {
+      "MicrosoftExpressionInteractions/3.0.40218": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        }
+      },
+      "System.Windows.Interactivity.WPF/2.0.20525": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x64": {
+      "MicrosoftExpressionInteractions/3.0.40218": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        }
+      },
+      "System.Windows.Interactivity.WPF/2.0.20525": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "MicrosoftExpressionInteractions/3.0.40218": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Expression.Interactions.dll": {}
+        }
+      },
+      "System.Windows.Interactivity.WPF/2.0.20525": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {},
+          "lib/net40/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MicrosoftExpressionInteractions/3.0.40218": {
+      "sha512": "QPi+KYM//nirPGmTsKl3xLQAyfxxYUsyERBun3am32QQnVB+3I3izRbtcYLgy5kcBuAX9ZhHzWFD7n7SEu0WPw==",
+      "type": "package",
+      "path": "microsoftexpressioninteractions/3.0.40218",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Expression.Interactions.dll",
+        "lib/net40/Microsoft.Expression.Interactions.xml",
+        "lib/net45/Microsoft.Expression.Interactions.dll",
+        "microsoftexpressioninteractions.3.0.40218.nupkg.sha512",
+        "microsoftexpressioninteractions.nuspec"
+      ]
+    },
+    "System.Windows.Interactivity.WPF/2.0.20525": {
+      "sha512": "0r+Le4E7hCm4zToUvBzjSUyTcuU3rFeoPa7JyTdWIzR/F7wH6+O/pWkjHIG40hIA0z1wvRdZayvoizA4wcK1dg==",
+      "type": "package",
+      "path": "system.windows.interactivity.wpf/2.0.20525",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Expression.Interactions.dll",
+        "lib/net40/Microsoft.Expression.Interactions.xml",
+        "lib/net40/System.Windows.Interactivity.dll",
+        "lib/net40/System.Windows.Interactivity.xml",
+        "system.windows.interactivity.wpf.2.0.20525.nupkg.sha512",
+        "system.windows.interactivity.wpf.nuspec"
+      ]
+    },
+    "Util/1.0.0": {
+      "type": "project",
+      "path": "../Util/Util.csproj",
+      "msbuildProject": "../Util/Util.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.8": [
+      "MicrosoftExpressionInteractions >= 3.0.40218",
+      "System.Windows.Interactivity.WPF >= 2.0.20525",
+      "Util >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ej2285\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\GoGetMesh.csproj",
+      "projectName": "GoGetMesh",
+      "projectPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\GoGetMesh.csproj",
+      "packagesPath": "C:\\Users\\ej2285\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\GoGetMesh\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\ej2285\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net48"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\ej2285\\AppData\\Local\\Esri\\NuGet": {},
+        "http://nuget.c1.grapecity.com/nuget": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net48": {
+          "projectReferences": {
+            "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj": {
+              "projectPath": "D:\\GitHub\\arcgis-pro-sdk-tools\\ESRIJProAddinMesh\\Util\\Util.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net48": {
+        "dependencies": {
+          "MicrosoftExpressionInteractions": {
+            "target": "Package",
+            "version": "[3.0.40218, )"
+          },
+          "System.Windows.Interactivity.WPF": {
+            "target": "Package",
+            "version": "[2.0.20525, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
