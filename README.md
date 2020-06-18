@@ -25,7 +25,7 @@ ArcGIS Pro SDK for .NET を使用したツールを公開しています。
 * [インストール手順](https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-Installation-and-Upgrade)
 
 ## 公開ツール
-* [地域メッシュツール(https://github.com/EsriJapan/arcgis-pro-sdk-tools/tree/master/ESRIJProAddinMesh)
+* [地域メッシュツール](https://github.com/EsriJapan/arcgis-pro-sdk-tools/tree/master/ESRIJProAddinMesh)
 * [クリップツール](https://github.com/EsriJapan/arcgis-pro-sdk-tools/tree/master/ESRIJProAddinClipTool)
 
 ## ArcGIS Pro SDK for .NET の基本操作
