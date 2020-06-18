@@ -1,0 +1,10 @@
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\bin\Debug\ESRIJ.ArcGISPro.ESRIJProAddinClipTool.dll
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\bin\Debug\ESRIJ.ArcGISPro.ESRIJProAddinClipTool.pdb
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\bin\Debug\ESRIJ.ArcGISPro.ExecuteClip.dll
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\bin\Debug\ESRIJ.ArcGISPro.ExecuteClip.pdb
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\bin\Debug\ESRIJ.ArcGISPro.ExecuteClip.dll.config
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\obj\Debug\ESRIJProAddinClipTool.csprojAssemblyReference.cache
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\obj\Debug\ESRIJProAddinClipTool.csproj.CoreCompileInputs.cache
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\obj\Debug\ESRIJProAddinClipTool.csproj.CopyComplete
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\obj\Debug\ESRIJ.ArcGISPro.ESRIJProAddinClipTool.dll
+D:\GitHub\arcgis-pro-sdk-tools\ESRIJProAddinClipTool\ESRIJProAddinClipTool\obj\Debug\ESRIJ.ArcGISPro.ESRIJProAddinClipTool.pdb
