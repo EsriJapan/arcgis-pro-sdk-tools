@@ -1,0 +1,47 @@
+﻿<ArcGIS defaultAssembly="ESRIJ.ArcGISPro.ESRIJProAddinMesh.dll" defaultNamespace="ESRIJ.ArcGISPro" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{6cb711f4-263b-4ae9-b5f2-e565a9b417e3}" version="1.0" desktopVersion="2.4.0001">
+    <Name>ESRIJ.ArcGISPro.ESRIJProAddinMesh</Name>
+    <Description>ESRIJProAddinMesh description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>ej2285</Author>
+    <Company>Acme</Company>
+    <Date>2020/03/05 9:30:09, 2020</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="EJMesh_Module" className="ModuleMain" autoLoad="false" caption="地域メッシュ取得ツール for ArcGIS Pro">
+      <tabs>
+        <tab id="EJMesh_Tab" caption="地域メッシュ" keytip="Z">
+          <group refID="EJMesh_EditGroup" />
+          <group refID="EJMesh_ShareGroup" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="EJMesh_EditGroup" caption="地域メッシュ作成" appearsOnAddInTab="false">
+          <button refID="EJMesh_Button" size="large" />
+        </group>
+      <group id="EJMesh_ShareGroup" caption="地域メッシュ共有" appearsOnAddInTab="false">
+          <comboBox refID="EJMesh_Combo"  size="middle"/>
+        　<button refID="EJMesh_Button_Shared" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <button id="EJMesh_Button" caption="作成" className="EJMesh_ShowButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/ElementRectangle32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/ElementRectangle32.png">
+          <tooltip heading="地域メッシュ作成">
+            入力した地域メッシュコードから地域メッシュを作成します<disabledText /></tooltip>
+        </button>
+        <comboBox id="EJMesh_Combo" caption=""  className="ChooseMesh" assembly="ESRIJ.ArcGISPro.SharedMesh.dll" itemWidth="140" extendedCaption="Extended Caption" isEditable="false" isReadOnly="true" resizable="true">
+          <tooltip heading="Tooltip Heading">ArcGIS Online の地域メッシュを選択します<disabledText /></tooltip>
+        </comboBox>
+      　<button id="EJMesh_Button_Shared" caption="共有" className="ShareMesh" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/LayerImportSymbology32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/LayerImportSymbology32.png">
+          <tooltip heading="地域メッシュ作成">選択した地域メッシュを共有します<disabledText /></tooltip>
+        </button>
+      </controls>
+      <dockPanes>
+        <dockPane id="EJMesh_DockPane" caption="地域メッシュ作成" className="EJMeshViewModel" assembly="ESRIJ.ArcGISPro.GoGetMesh.dll" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="EJMeshView"  assembly="ESRIJ.ArcGISPro.GoGetMesh.dll" />
+        </dockPane>
+      </dockPanes>
+    </insertModule>
+  </modules>
+</ArcGIS>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGIS defaultAssembly="ESRIJ.ArcGISPro.ESRIJProAddinClipTool.dll"
+        defaultNamespace="ESRIJ.ArcGISPro"
+        xmlns="http://schemas.esri.com/DADF/Registry"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+
+  <AddInInfo id="{6474cd70-bbf8-4ac9-87be-22865b25772b}" version="1.0" desktopVersion="2.5.22081">
+    <Name>ESRIJProAddinClipTool</Name>   
+    <Description>ESRIJProAddinClipTool description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>ej2285</Author>
+    <Company>Acme</Company>
+    <Date>2020/03/19 9:29:56, 2020</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+
+  <modules>
+    <insertModule id="EJClip_Module" className="MainModule" autoLoad="false" caption="クリップツール for ArcGIS Pro">
+      <tabs>
+        <tab id="EJClip_Tab" caption="クリップツール" keytip="Z">
+          <group refID="EJClip_SaveGroup" />
+          <group refID="EJClip_SetExtentGroup" />
+          <group refID="EJClip_ExecuteGroup" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="EJClip_SaveGroup" caption="クリップ格納場所" appearsOnAddInTab="false">
+          <editBox refID="EJClip_SaveLocation" size="large" />
+          <button refID="EJClip_DialogButton" size="small" />
+        </group>
+        <group id="EJClip_SetExtentGroup" caption="クリップ範囲設定" appearsOnAddInTab="false">
+          <button refID="EJClip_RectanbleButton" size="large" />
+          <button refID="EJClip_PolygonButton" size="large" />
+          <button refID="EJClip_SelectPolygonButton" size="large" />
+        </group>
+        <group id="EJClip_ExecuteGroup" caption="クリップ実行" appearsOnAddInTab="false">       
+          <button refID="EJClip_ClipButton" size="large" />
+          <button refID="EJClip_ClearButton" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <editBox id="EJClip_SaveLocation" caption="格納場所:" className="SaveLocation" assembly="ESRIJ.ArcGISPro.ExecuteClip.dll" disableIfBusy="false" sizeString="123456789012345678901234567890" dataType="string">
+          <tooltip heading="">
+            クリップの保存先を指定してください<disabledText></disabledText>
+          </tooltip>
+        </editBox>
+        <button id="EJClip_DialogButton" caption="" className="EJClip_DialogButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/FolderConnectionAdd32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/FolderConnectionAdd32.png">
+          <tooltip heading="ダイアログ">
+            ダイアログを起動します<disabledText />
+          </tooltip>
+        </button>
+        <tool id="EJClip_RectanbleMapTool" caption="矩形選択ツール" className="ClipArea" assembly="ESRIJ.ArcGISPro.ExecuteClip.dll" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple32.png">
+          <tooltip heading="">
+            <disabledText />
+          </tooltip>
+        </tool>
+        <tool id="EJClip_PolygonMapTool" caption="任意選択ツール" className="ClipArea" assembly="ESRIJ.ArcGISPro.ExecuteClip.dll" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple32.png">
+          <tooltip heading="">
+            <disabledText />
+          </tooltip>
+        </tool>
+        <tool id="EJClip_SelectPolygonMapTool" caption="ポリゴン選択ツール" className="ClipArea" assembly="ESRIJ.ArcGISPro.ExecuteClip.dll" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple32.png">
+          <tooltip heading="">
+            <disabledText />
+          </tooltip>
+        </tool>
+        <button id="EJClip_RectanbleButton" caption="矩形" className="EJClip_Drawing" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/ElementRectangle32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/ElementRectangle32.png">
+          <tooltip heading="矩形">
+            クリップ用の矩形を作成します<disabledText />
+          </tooltip>
+        </button>
+        <button id="EJClip_PolygonButton" caption="任意" className="EJClip_Drawing" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/ElementPolygon32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/ElementPolygon32.png">
+          <tooltip heading="任意">
+            クリップ用の任意のポリゴンを作成します<disabledText />
+          </tooltip>
+        </button>
+        <button id="EJClip_SelectPolygonButton" caption="選択" className="EJClip_Drawing" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/SelectionSelectTool32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/SelectionSelectTool32.png">
+          <tooltip heading="選択">
+            クリップ用のポリゴンを選択します<disabledText />
+          </tooltip>
+        </button>
+        <button id="EJClip_ClipButton" caption="クリップ" className="EJClip_ClipButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/EditingClipFeatures32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/EditingClipFeatures32.png">
+          <tooltip heading="クリップ">
+            作成もしくは選択した範囲をクリップします<disabledText />
+          </tooltip>
+        </button>
+        <button id="EJClip_ClearButton" caption="クリア" className="EJClip_ClearButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/SelectionClearSelected32.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/SelectionClearSelected32.png">
+          <tooltip heading="クリアー">
+            作成もしくは選択した範囲をクリアします<disabledText />
+          </tooltip>
+        </button>
+      </controls> 
+    </insertModule>
+  </modules>
+</ArcGIS>

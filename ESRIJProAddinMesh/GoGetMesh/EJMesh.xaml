@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="ESRIJ.ArcGISPro.EJMeshView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
+             xmlns:ui="clr-namespace:ESRIJ.ArcGISPro"
+             xmlns:extensions="clr-namespace:ArcGIS.Desktop.Extensions;assembly=ArcGIS.Desktop.Extensions"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" 
+             d:DataContext="{Binding Path=ui.EJMeshViewModel}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <extensions:DesignOnlyResourceDictionary Source="pack://application:,,,/ArcGIS.Desktop.Framework;component\Themes\Default.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" LastChildFill="true" KeyboardNavigation.TabNavigation="Local" Height="30" >
+            <TextBlock Grid.Column="1" Text="{Binding Heading}" Style="{DynamicResource Esri_TextBlockDockPaneHeader}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock.ToolTip>
+                    <WrapPanel Orientation="Vertical" MaxWidth="300">
+                        <TextBlock Text="{Binding Heading}" TextWrapping="Wrap"/>
+                    </WrapPanel>
+                </TextBlock.ToolTip>
+             </TextBlock>
+        </DockPanel>
+        <StackPanel Grid.Row="1" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <RadioButton Name="RadioButton1" Grid.Row="0" Grid.Column="0" IsChecked="{Binding RadioFirstMesh}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,10,5,8.2"/>
+                <TextBlock Grid.Row="0" Grid.Column="1"  Text="1次メッシュ" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <TextBox Grid.Row="0" Grid.Column="2" IsEnabled="{Binding ElementName=RadioButton1, Path=IsChecked}" TextAlignment="Left" Width="100" Text="{Binding FirstMesh, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,5,5,5"/>
+                <TextBlock Grid.Row="0" Grid.Column="3"  Text="原点(左下)" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <RadioButton Name="RadioButton2" Grid.Row="1" Grid.Column="0" IsChecked="{Binding RadioSecondMesh}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,10,5,8.2"/>
+                <TextBlock Grid.Row="1" Grid.Column="1"  Text="2次メッシュ" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <TextBox Grid.Row="1" Grid.Column="2"  IsEnabled="{Binding ElementName=RadioButton2, Path=IsChecked}" TextAlignment="Left" Width="100" Text="{Binding SecondMesh, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,5,5,5"/>
+                <StackPanel Grid.Row="1" Grid.Column="3">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="緯度:" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Latitude, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                    </Grid>
+                </StackPanel>
+                <RadioButton Name="RadioButton3" Grid.Row="2" Grid.Column="0" IsChecked="{Binding RadioThirdMesh}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,10,5,8.2"/>
+                <TextBlock Grid.Row="2" Grid.Column="1"  Text="3次メッシュ" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <TextBox Grid.Row="2" Grid.Column="2" IsEnabled="{Binding ElementName=RadioButton3, Path=IsChecked}" TextAlignment="Left" Width="100" Text="{Binding ThirdMesh, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5,5,5,5"/>
+                <StackPanel Grid.Row="2" Grid.Column="3">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="経度:" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Longitude, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            
+            <Button Grid.Row="0" Grid.Column="0" Content="計算"  HorizontalAlignment="Stretch" Command="{Binding Path=DetectMesh}" VerticalAlignment="Center"
+                            Style="{DynamicResource Esri_Button}"></Button>
+            <Button Grid.Row="0" Grid.Column="1" Content="移動"  HorizontalAlignment="Stretch" Command="{Binding Path=MoveToMesh}" VerticalAlignment="Center"
+                            Style="{DynamicResource Esri_Button}"></Button>
+                <Button Grid.Row="0" Grid.Column="2" Content="作成"  HorizontalAlignment="Stretch" Command="{Binding Path=CreateMesh}" IsEnabled="{Binding CanPressCreateMesh}" VerticalAlignment="Center"
+                            Style="{DynamicResource Esri_Button}"></Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,92 @@
+﻿<controls:ProWindow x:Class="ESRIJ.ArcGISPro.MeshDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:ArcGIS.Desktop.Framework.Controls;assembly=ArcGIS.Desktop.Framework"
+        xmlns:mapping="clr-namespace:ArcGIS.Desktop.Mapping.Controls;assembly=ArcGIS.Desktop.Mapping"
+        xmlns:extensions="clr-namespace:ArcGIS.Desktop.Extensions;assembly=ArcGIS.Desktop.Extensions"         
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:ui="clr-namespace:ESRIJ.ArcGISPro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="地域メッシュ作成" Height="300" Width="500"
+        WindowStartupLocation="CenterOwner"
+        >
+    <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <extensions:DesignOnlyResourceDictionary Source="pack://application:,,,/ArcGIS.Desktop.Framework;component\Themes\Default.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0"  Text="作成方法" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <RadioButton Name="RadioButtonNew" Grid.Row="0" Grid.Column="1" IsChecked="{Binding RadioNew}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,10,5,8.2"/>
+                <TextBlock Grid.Row="0" Grid.Column="2"  Text="新規フィーチャークラスを作成" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <RadioButton Name="RadioButtonAdd" Grid.Row="0" Grid.Column="3" IsChecked="{Binding RadioAdd}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,10,5,8.2"/>
+                <TextBlock Grid.Row="0" Grid.Column="4"  Text="既存フィーチャークラスに追加" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                
+                
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0"  Text="出力先" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding GdbPath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsEnabled="{Binding ElementName=RadioButtonNew, Path=IsChecked}" IsReadOnly="True" Margin="5,5,5,5"/>
+                <Button Content="開く" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Command="{Binding Path=OpenItemCmd}" IsEnabled="{Binding ElementName=RadioButtonNew, Path=IsChecked}" VerticalAlignment="Center"
+                            Style="{DynamicResource Esri_Button}"></Button>
+                <Button Content="作成" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Command="{Binding Path=MakeMeshCmd}" IsEnabled="{Binding ElementName=RadioButtonNew, Path=IsChecked}" VerticalAlignment="Center"
+                            Style="{DynamicResource Esri_Button}"></Button>
+                
+            </Grid>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0"  Text="フィーチャークラス" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FeatureClassPath, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsEnabled="{Binding ElementName=RadioButtonAdd, Path=IsChecked}" IsReadOnly="True" Margin="5,5,5,5"/>
+                <Button Content="開く" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Command="{Binding Path=OpenItemCmd}" IsEnabled="{Binding ElementName=RadioButtonAdd, Path=IsChecked}" VerticalAlignment="Center" Style="{DynamicResource Esri_Button}"></Button>
+                <TextBlock Grid.Row="1" Grid.Column="0"  Text="フィールド" VerticalAlignment="Center"  Margin="5,10,5,8.2"/>
+                <ComboBox Grid.Row="1" Grid.Column="1"  ItemsSource="{Binding Fields}" SelectedItem="{Binding SelectedField}" IsEnabled="{Binding ElementName=RadioButtonAdd, Path=IsChecked}" Margin="5,5,5,5"/>
+                <Button Content="作成" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Command="{Binding Path=MakeMeshCmd}" IsEnabled="{Binding ElementName=RadioButtonAdd, Path=IsChecked}" VerticalAlignment="Center"
+                            Style="{DynamicResource Esri_Button}"></Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</controls:ProWindow>
