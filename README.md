@@ -1,5 +1,5 @@
 # arcgis-pro-sdk-tools
-ArcGIS Pro SDK for .NET を使用したツールを公開しています。
+ArcGIS Pro SDK を使用したツールを公開しています。ArcGIS Pro SDK の様々な API を使用しているので、開発時の参考リソースとしてもご使用ください。
 
 ## 使用している製品・プロジェクト
 
