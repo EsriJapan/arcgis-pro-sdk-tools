@@ -363,6 +363,10 @@ namespace ESRIJ.ArcGISPro
                                             featureLayer = LayerFactory.Instance.CreateFeatureLayer(featureClass, MapView.Active.Map);
                                         }
                                     }
+                                    else
+                                    {
+                                        featureLayer = LayerFactory.Instance.CreateFeatureLayer(featureClass, MapView.Active.Map);
+                                    }
                                 }
                             }
 
@@ -374,17 +378,12 @@ namespace ESRIJ.ArcGISPro
                             attributes.Add(shapeField, polygon);
                             attributes.Add(SelectedField, EJMeshCalculator.HighlightPolygon.FirstOrDefault().Key);
 
-                            editOperation.Create(featureClass, attributes);
+                            editOperation.Create(featureLayer, attributes);
                             editOperation.Execute();
    
                         }
                     }
                 });
-
-                if (editOperation.IsSucceeded == false)
-                {
-                    throw new Exception();
-                }
 
                 await Project.Current.SaveEditsAsync();
             }
